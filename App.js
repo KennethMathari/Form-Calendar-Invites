@@ -10,8 +10,6 @@ const eventItem = document.querySelector('.form-output');
 
 
 
-
-
 //Event Listeners
 Button.addEventListener('click', addEvent);
 
@@ -81,8 +79,9 @@ function addEvent(event){
  //Clear input-location value
  locationInput.value='';
 
- //Create Google/Apple/Outlook Button
- eventdiv.innerHTML='<a cal-platform="google" href="#" class="button-event google w-button">Google Calendar</a> <a cal-platform="apple" href="#" class="button-event apple w-button">Apple Calendar</a> <a cal-platform="outlook" href="#" class="button-event outlook w-button">Outlook Calendar</a>';
- 
+const buttons='<a cal-platform="google" href="#" class="button-event google w-button">Google Calendar</a> <a cal-platform="apple" href="#" class="button-event apple w-button">Apple Calendar</a> <a cal-platform="outlook" href="#" class="button-event outlook w-button">Outlook Calendar</a>';
+eventdiv.insertAdjacentHTML( 'beforeend', buttons );
+
+
  
 }
