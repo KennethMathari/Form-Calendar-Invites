@@ -18,10 +18,10 @@
   <h2>Add Event</h2>
   <form >
     <div class="form-group">
-      <input type="text" class="form-control input-title" id="input-title" placeholder="Enter Title" name="title">
+      <input type="text" class="form-control input-title" id="input-title" placeholder="Enter Title" name="title" required="">
     </div>
     <div class="form-group">
-      <textarea class="form-control input-desc" id="input-desc" placeholder="Enter Description" name="description"></textarea>
+      <textarea class="form-control input-desc" id="input-desc" placeholder="Enter Description" name="description" required=""></textarea>
     </div>
     <div class="form-group">
       <input type="text" class="form-control input-timezone" id="input-timezone" placeholder="Enter Timezone" name="timezone">
@@ -29,17 +29,17 @@
     		<div class="col-md-6">
     			<div class="form-group">
     	<label class="control-label" for="input-start">Start Time:</label>
-      <input  class="form-control input-start" id="input-start" placeholder="Enter Start Time" name="start">
+      <input  type="datetime-local" class="form-control input-start" id="input-start" placeholder="Enter Start Time" name="start" required="">
     </div>
     		</div>
     		<div class="col-md-6">
     			<div class="form-group">
     	<label class="control-label" for="input-start">End Time:</label>
-      <input  class="form-control input-end" id="input-end" placeholder="Enter End Time" name="end">
+      <input type="datetime-local" class="form-control input-end" id="input-end" placeholder="Enter End Time" name="end">
     </div>
     </div>
     <div class="form-group">
-      <input type="text" class="form-control input-location" id="input-location" placeholder="Enter Location" name="location">
+      <input type="text" class="form-control input-location" id="input-location" placeholder="Enter Location" name="location" required="">
     </div>
         <button type="submit" class="btn btn-primary">Submit</button>
 
@@ -47,28 +47,7 @@
   </form>
 
   <div class="form-output">
-<script src="https://cdn.finsweet.com/files/fscalendar/calendar-invite-v1.0.min.js"></script>
-<script>
-// initialize the F'in sweet Cal Invite
-var calendarInvite = fsCalendar({
-// class of event title
-title: '.event-title',
-// class of event start date
-start: '.event-start',
-// class of event end date
-end: '.event-end',
-// class of event duration
-timezone: '.event-timezone',
-// class of event Address
-address: '.event-location',
-// class of event Description
-description: '.event-desc',
-// class of the cms cal item
-eventItemClass: '.event-item-content',
-// monitor for text translations
-localize: true
-});
-</script>
+
     </div>
 
 </div>
@@ -93,6 +72,28 @@ localize: true
 </div> -->
 
 <script src="./App.js"></script>
+<script src="https://cdn.finsweet.com/files/fscalendar/calendar-invite-v1.0.min.js"></script>
+<script>
+// initialize the F'in sweet Cal Invite
+var calendarInvite = fsCalendar({
+// class of event title
+title: '.event-title',
+// class of event start date
+start: '.event-start',
+// class of event end date
+end: '.event-end',
+// class of event duration
+timezone: '.event-timezone',
+// class of event Address
+address: '.event-location',
+// class of event Description
+description: '.event-desc',
+// class of the cms cal item
+eventItemClass: '.event-item-content',
+// monitor for text translations
+localize: true
+});
+</script>
 
 
 
