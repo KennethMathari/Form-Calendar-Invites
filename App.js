@@ -29,13 +29,14 @@ function addEvent(event){
 
  //create Label
   const label =document.createElement("h3");
-  label.innerHTML="Copy the code in the text area and paste in the body tags";
+  label.innerHTML="Copy the code in the text area and paste in the embed block";
   eventItem.appendChild(label);
 
 
 
   //Create Text Area
  const textarea =document.createElement("textarea");
+ textarea.classList.add("form-control");
  textarea.setAttribute("rows", "10");
  textarea.setAttribute("cols","70");
  var snippet= " <div class='event-item-content'><div class='event-title'>"+titleInput.value+"</div><div class='event-desc'>"+descInput.value+"</div><div class='event-timezone'>"+timezoneInput.value+"</div><div class='event-start'>"+startInput.value+"</div><div class='event-end'>"+endInput.value+"</div><div class='event-location'>"+locationInput.value+"</div><a cal-platform='google' href='#' class='button-event google w-button'>Google Calendar</a><a cal-platform='apple' href='#' class='button-event apple w-button'>Apple Calendar</a><a cal-platform='outlook' href='#' class='button-event outlook w-button'>Outlook Calendar</a></div><script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script><script src='https://cdn.finsweet.com/files/fscalendar/calendar-invite-v1.0.min.js'></script><script> var calendarInvite = fsCalendar({title: '.event-title',start: '.event-start',end: '.event-end',timezone: '.event-timezone',address: '.event-location',description: '.event-desc',eventItemClass: '.event-item-content',localize: true});</script>";
